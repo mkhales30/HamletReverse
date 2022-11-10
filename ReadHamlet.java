@@ -1,5 +1,13 @@
-
-
+/**
+ * class name: ReadHamlet
+ * author: Monauver Rahman
+ * course: ITEC 2150
+ * date: November 4, 2022
+ * version 1.0
+ * description: This program will read the text file "hamlet.txt" and then 
+ * will create an array list of all the lines from the text file 
+ * and lastly will print out line by line in reverse order.
+ */
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -13,15 +21,13 @@ public class ReadHamlet{
     FileReader file = new FileReader("src/hamlet.txt");
     
     Scanner in = new Scanner(file);
-    ArrayList<String> lines = new ArrayList<String>();
+    ArrayList<String> ln = new ArrayList<String>();
     while (in.hasNext()) {
-      lines.add(in.nextLine());
+      ln.add(in.nextLine());
     }
             
-    in.close();
-            
-    for (int i = lines.size() - 1; i >= 0; i--) {
-      System.out.println(lines.get(i));
+    for (int i = ln.size() - 1; i >= 0; i--) {
+      System.out.println(ln.get(i));
     } 
   }
 //    public static void main(String[] args) {
@@ -39,5 +45,4 @@ public class ReadHamlet{
 //            e.printStackTrace();
 //        }
 //    }
-
 }
